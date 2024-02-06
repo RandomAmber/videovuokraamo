@@ -63,6 +63,7 @@ if (!empty($_POST)) {
         $pdo->exec("set names utf8");
         $q->execute(array($asiakasID, $vuokrauspvm, $palautuspvm, $kokonaishinta));
 
+
         $vuokrausID = $pdo->lastInsertId();
         foreach ($video as $key => $n) {
             $sql = "INSERT INTO vuokrausrivi (VuokrausID, videoID, hinta) values(?,?,?)";
