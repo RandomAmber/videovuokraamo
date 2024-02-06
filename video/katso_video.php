@@ -32,6 +32,8 @@ if (null == $videoID) {
 ?>
 
 
+
+
 <body style="margin-top: 100px;">
 
     <!-- show the video info with readonly input to the user -->
@@ -40,85 +42,97 @@ if (null == $videoID) {
             <h3>Katso videotietoja</h3>
         </div>
 
-        <!-- nimi -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Nimi</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticnimi" value="<?php echo $data['nimi']; ?>">
+        <div class="row">
+        <!-- left column -->
+            <div class="col-md-6"> 
+                <!-- nimi -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Nimi</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="staticnimi" value="<?php echo $data['nimi']; ?>">
+                    </div>
+                </div>
+
+                <!-- kuvaus -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Kuvaus</label>
+                    <div class="col-sm-10">
+                        <p style="padding-left: 20px;" class="text-wrap"><?php echo $data['kuvaus']; ?></p> 
+                        <!-- <input type="text" readonly class="form-control-plaintext text-wrap" id="statickuvaus" value="<?php echo $data['kuvaus']; ?>"> -->
+                    </div>
+                </div>
+
+                <!-- genre -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Genre</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="staticgenre" value="<?php echo $data['genre']; ?>">
+                    </div>
+                </div>
+
+                <!-- ikaraja -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ikäraja</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="staticikaraja" value="<?php echo $data['ikaraja']; ?> +">
+                    </div>
+                </div>
+
+                <!-- kesto -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Kesto</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="statickesto" value="<?php echo $data['kesto']; ?> min">
+                    </div>
+                </div>
+
+                <!-- julkaisupaiva -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Julkaisupäivä</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="staticjulkaisupaiva" value="<?php echo $data['julkaisupaiva']; ?>">
+                    </div>
+                </div>
+
+                <!-- tuotantovuosi -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Tuotantovuosi</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="statictuotantovuosi" value="<?php echo $data['tuotantovuosi']; ?>">
+                    </div>
+                </div>
+
+                <!-- ohjaaja -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ohjaaja</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="staticohjaaja" value="<?php echo $data['ohjaaja']; ?>">
+                    </div>
+                </div>
+
+                <!-- nayttelijat -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Näyttelijät</label>
+                    <div class="col-sm-10">
+                        <input type="text" style="padding-left: 20px;" readonly class="form-control-plaintext" id="staticnayttelijat" value="<?php echo $data['nayttelijat']; ?>">
+                    </div>
+                </div>
             </div>
+
+            <div class="col-md-6">
+                <!-- kuva -->
+                <div class="form-group row"> 
+                    <img class="featurette-image img-fluid mx-auto" src="../img/<?php echo $data['kuva']; ?>" alt="<?php echo $row['nimi']; ?>" width="300">
+
+
+                </div>
+            </div>
+
         </div>
 
-        <!-- kuvaus -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Kuvaus</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="statickuvaus" value="<?php echo $data['kuvaus']; ?>">
-            </div>
-        </div>
 
-        <!-- genre -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Genre</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticgenre" value="<?php echo $data['genre']; ?>">
-            </div>
-        </div>
 
-        <!-- ikaraja -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Ikäraja</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticikaraja" value="<?php echo $data['ikaraja']; ?>">
-            </div>
-        </div>
 
-        <!-- kesto -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Kesto</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="statickesto" value="<?php echo $data['kesto']; ?>">
-            </div>
-        </div>
-
-        <!-- julkaisupaiva -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Julkaisupäivä</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticjulkaisupaiva" value="<?php echo $data['julkaisupaiva']; ?>">
-            </div>
-        </div>
-
-        <!-- tuotantovuosi -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Tuotantovuosi</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="statictuotantovuosi" value="<?php echo $data['tuotantovuosi']; ?>">
-            </div>
-        </div>
-
-        <!-- ohjaaja -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Ohjaaja</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticohjaaja" value="<?php echo $data['ohjaaja']; ?>">
-            </div>
-        </div>
-
-        <!-- nayttelijat -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Näyttelijät</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticnayttelijat" value="<?php echo $data['nayttelijat']; ?>">
-            </div>
-        </div>
-
-        <!-- kuva -->
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-right">Kuva!</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="statickuva" value="<?php echo $data['kuva']; ?>">
-            </div>
-        </div>
 
         <div>
             <a class="btn btn-secondary" href="video.php">Takaisin</a>
