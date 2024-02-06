@@ -49,7 +49,7 @@ if (!empty($_POST)) {
             <p class="alert alert-warning">Haluatko varmasti poistaa videon <?php echo $data['nimi']; ?> tiedot?</p>
             <div>
                 <button type="submit" class="btn btn-danger">Kyllä</button>
-                <a class="btn" href="video.php">Ei</a>
+                <a class="btn btn-secondary" href="video.php">Ei</a>
             </div>
         </form>
     </div>

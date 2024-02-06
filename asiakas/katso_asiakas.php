@@ -108,7 +108,7 @@ if (null == $asiakasID) {
         </div>
 
         <div>
-            <a class="btn" href="asiakas.php">Takaisin</a> <!-- index.php -> asiakas.php -->
+            <a class="btn btn-secondary" href="asiakas.php">Takaisin</a> <!-- index.php -> asiakas.php -->
         </div>
 
 

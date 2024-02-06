@@ -217,7 +217,7 @@ if (!empty($_POST)) {
 
             <div class="form-actions">
                 <button type="submit" class="btn btn-success">Lisää</button>
-                <a class="btn" href="asiakas.php">Takaisin</a>
+                <a class="btn btn-secondary" href="asiakas.php">Takaisin</a>
 
             </div>
         </form>

@@ -121,7 +121,7 @@ if (null == $videoID) {
         </div>
 
         <div>
-            <a class="btn" href="video.php">Takaisin</a>
+            <a class="btn btn-secondary" href="video.php">Takaisin</a>
         </div>
 
 

@@ -116,7 +116,7 @@ if (null == $myyjaID) {
         </div>
 
         <div>
-            <a class="btn" href="myyja.php">Takaisin</a>
+            <a class="btn btn-secondary" href="myyja.php">Takaisin</a>
         </div>
 
     </div>

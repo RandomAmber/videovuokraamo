@@ -51,7 +51,7 @@ if (!empty($_POST)) {
             <p class="alert alert-warning">Haluatko varmasti poistaa myyjän <?php echo $data['etunimi'] . " " . $data["sukunimi"]; ?> tiedot?</p>
             <div>
                 <button type="submit" class="btn btn-danger">Kyllä</button>
-                <a class="btn" href="myyja.php">Ei</a>
+                <a class="btn btn-secondary" href="myyja.php">Ei</a>
             </div>
         </form>
     </div>
