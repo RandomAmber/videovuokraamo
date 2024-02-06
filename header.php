@@ -66,7 +66,7 @@ session_start();
                         Raportit
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="vuokralla.php">Vuokralla</a>
+                        <a class="dropdown-item" href="http://localhost/videovuokramo/vuokralla.php">Vuokralla</a>
                         </div>
                         </li>';
                     }
