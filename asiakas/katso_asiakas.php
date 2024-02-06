@@ -115,6 +115,6 @@ if (null == $asiakasID) {
     </div>
 
     <?php
-    include '../redirect.php';
+    include '../footer.php';
 
     ?>

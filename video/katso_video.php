@@ -128,6 +128,6 @@ if (null == $videoID) {
     </div>
 
     <?php
-    include '../redirect.php';
+    include '../footer.php';
 
     ?>

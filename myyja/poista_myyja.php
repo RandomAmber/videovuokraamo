@@ -57,6 +57,6 @@ if (!empty($_POST)) {
     </div>
 
     <?php
-    include '../redirect.php';
+    include '../footer.php';
 
     ?>

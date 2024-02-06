@@ -65,6 +65,6 @@ include '../redirect.php';
 
 
     <?php
-    include '../redirect.php';
+    include '../footer.php';
 
     ?>

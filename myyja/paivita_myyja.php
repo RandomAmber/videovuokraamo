@@ -281,6 +281,6 @@ if (!empty($_POST)) {
     </div> <!-- /container -->
 
     <?php
-    include '../redirect.php';
+    include '../footer.php';
 
     ?>
