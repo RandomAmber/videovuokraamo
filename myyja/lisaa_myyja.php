@@ -93,12 +93,16 @@ if (!empty($_POST)) {
     // get the user to myyja.php page
 
     if ($valid) {
+        // hash the password before storing it in the db:
+        $hashed_password = password_hash($salasana, PASSWORD_DEFAULT);
+
+
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->exec("set names utf8");
         $sql = "INSERT INTO myyja (etunimi, sukunimi, lahiosoite, postinumero, postitoimipaikka, puhelin, sahkoposti, kayttajatunnus, salasana, rooli) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $q = $pdo->prepare($sql);
-        $q->execute(array($etunimi, $sukunimi, $lahiosoite, $postinumero, $postitoimipaikka, $puhelin, $sahkoposti, $kayttajatunnus, $salasana, $rooli));
+        $q->execute(array($etunimi, $sukunimi, $lahiosoite, $postinumero, $postitoimipaikka, $puhelin, $sahkoposti, $kayttajatunnus, $hashed_password, $rooli));
         Database::disconnect();
         header("Location: myyja.php");
     }
