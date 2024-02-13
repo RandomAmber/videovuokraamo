@@ -13,4 +13,8 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
+// define root directory:
+// change accordingly!
+$root_folder = 'http://localhost/videovuokramo';
+
 ?>

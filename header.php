@@ -2,7 +2,7 @@
 // Initialise the session
 session_start();
 
-
+require_once 'config.php';
 
 ?>
 
@@ -31,7 +31,7 @@ session_start();
 
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="http://localhost/videovuokramo/index.php">Videovuokraamo</a>
+            <a class="navbar-brand" href="<?php echo $root_folder . '/index.php'; ?>">Videovuokraamo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

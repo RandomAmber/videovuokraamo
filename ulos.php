@@ -1,4 +1,7 @@
 <?php
+
+require_once 'config.php'; //fixed the redirection
+
 // Start the session
 session_start();
 
@@ -9,6 +12,6 @@ $_SESSION = array();
 session_destroy();
 
 // Redirect to the index page
-header('Location: http://localhost/videovuokramo/index.php');
+header('Location: ' . $root_folder . '/index.php'); // fixed
 exit;
 ?>
