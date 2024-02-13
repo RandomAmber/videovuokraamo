@@ -2,7 +2,7 @@
 $valikko = 'vuokraus';
 include 'header.php';
 include 'redirect.php';
-
+require_once 'config.php';
 require_once 'database.php';
 
 $virheilmoitus = '';
@@ -194,7 +194,9 @@ Note the array variable naming like <select name="video[]">
         </div>
         <div class="form-actions">
             <button type="submit" class="btn btn-success">Tallenna vuokraus</button>
-            <a class="btn" href="http://localhost/videovuokramo/index.php">Takaisin</a>
+            <a class="btn" href="<?php echo $root_folder . '/index.php'; ?>">Takaisin</a>
+
+            
         </div>
 
 
