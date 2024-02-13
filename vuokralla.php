@@ -22,7 +22,7 @@ include 'redirect.php';
             </thead>
             <tbody>
                 <?php
-                $data = date("Y-d-m"); // 2000-31-12
+                $date = date("Y-d-m"); // 2000-31-12 // fixed!
                 include 'database.php';
                 $pdo = Database::connect();
                 $pdo->exec("set names utf8");
